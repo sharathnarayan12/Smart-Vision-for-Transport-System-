@@ -22,13 +22,13 @@ capScr = cv2.cvtColor (capScr, cv2.COLOR_RGB2BGR)
 
 return capScr
 
-firebase=firebase.FirebaseApplication( "https://smart-image-transport-default-rtd
+firebase=firebase.FirebaseApplication( ">>>>>>>>>>>>")
 
 while True:
 
 print("Ready to go")
 
-custom_config=roen 3psm 6°
+custom_config=r '--oen 3 --psm 6'
 
 timer = cv2.getTickCount()
 
@@ -46,29 +46,20 @@ for b in boxes.splitlines():
 
 sprint (b)
 
-b = b.split("")
+b = b.split(' ')
 
 #print(b)
 
-x, y, w, h = int(b[1]), int(b[2]), int(b[3]), int(b[4]) cv2.rectangle(1mg, (x, hImg- y). (w, hImg- h), (50, 50, 255), 2)
-
-cv2.put Text (1mg, b[0], (x, himg- y+25), cv2. FONT HERSHEY SIMPLEX, 1, (50, 50, 255)
-
+x, y, w, h = int(b[1]), int(b[2]), int(b[3]), int(b[4])
+cv2.rectangle(1mg, (x, hImg- y). (w, hImg- h), (50, 50, 255), 2)
+cv2.putText(1mg, b[0], (x, himg- y+25), cv2. FONT HERSHEY SIMPLEX, 1, (50, 50, 255)
 fps = cv2.getTickFrequency()/ (cv2.getTickCount() - timer);
-for b in boxes.splitlines():
+cv2.imshow("Result",img) 
 
-sprint (b)
-
-b = b.split(""
-
-#print (b)
-
-x, y, w, h = int(b[1]), int(b[2]), int(b[3]), int(b[4]) cv2.rectangle(img, (x, hImg- y), (w, hImg- h), (50, 50, 255, 2)
-
-cv2.put Text (img, b[0], (x, himg- y+25), cv2.FONT HERSHEY SIMPLEX, 1, (50, 50, 255) fps = cv2.getTickFrequency() / (cv2.getTickCount() - timer);
-
-cv2.1mshow("Result",img) data_to_upload-("ID": text
-
-firebase.post('/smart-image-transport", data_to_upload) #cv2.put Text (ing, str(int(fps)), (75, 49), cv2.FONT HERSHEY_SIMPLEX, 0.7.
+data_to_upload={
+  "ID": text
+}
+firebase.post('/smart-image-transport', data_to_upload)
+#cv2.put Text (ing, str(int(fps)), (75, 49), cv2.FONT HERSHEY_SIMPLEX, 0.7.
 
 cv2.waitKey (0)
